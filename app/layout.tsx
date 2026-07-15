@@ -71,7 +71,15 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 
   robots: {
@@ -96,11 +104,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-gray-950 antialiased">
         <StructuredData />
-
         <Header />
-
         {children}
-
         <Footer />
       </body>
     </html>
