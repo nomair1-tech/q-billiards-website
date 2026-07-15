@@ -1,4 +1,6 @@
 const websiteUrl = "https://www.qbilliardshtx.com";
+const logoUrl = `${websiteUrl}/icon.png`;
+const heroImageUrl = `${websiteUrl}/images/hero/hero.jpg`;
 
 const socialProfiles = [
   "https://www.facebook.com/QBILIARDS/",
@@ -8,17 +10,49 @@ const socialProfiles = [
 
 const structuredData = {
   "@context": "https://schema.org",
+
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${websiteUrl}/#website`,
+      url: websiteUrl,
+      name: "Q Billiards Arena",
+      alternateName: "Q Billiards",
+      description:
+        "Official website of Q Billiards Arena, a Houston destination for pool, snooker, Chinese 9-ball, carom billiards, tournaments, food and late-night entertainment.",
+      publisher: {
+        "@id": `${websiteUrl}/#organization`,
+      },
+      inLanguage: "en-US",
+    },
+
     {
       "@type": "Organization",
       "@id": `${websiteUrl}/#organization`,
       name: "Q Billiards Arena",
       alternateName: "Q Billiards",
+      legalName: "Q Billiards Arena",
       url: websiteUrl,
+
+      logo: {
+        "@type": "ImageObject",
+        "@id": `${websiteUrl}/#logo`,
+        url: logoUrl,
+        contentUrl: logoUrl,
+        width: 512,
+        height: 512,
+        caption: "Q Billiards Arena logo",
+      },
+
+      image: {
+        "@id": `${websiteUrl}/#logo`,
+      },
+
       email: "qbilliards59@gmail.com",
       telephone: "+1-713-498-8813",
-      image: `${websiteUrl}/images/hero/hero.jpg`,
+
       sameAs: socialProfiles,
+
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -37,10 +71,22 @@ const structuredData = {
       name: "Q Billiards Arena",
       alternateName: "Q Billiards",
       url: websiteUrl,
-      image: `${websiteUrl}/images/hero/hero.jpg`,
+
+      logo: {
+        "@id": `${websiteUrl}/#logo`,
+      },
+
+      image: [
+        {
+          "@id": `${websiteUrl}/#logo`,
+        },
+        heroImageUrl,
+      ],
 
       description:
         "Q Billiards Arena is a Houston billiards and cue-sports venue offering American pool, professional snooker, heated snooker, Chinese 9-ball, carom billiards, poker room rentals, weekly tournaments, food, drinks and late-night entertainment.",
+
+      slogan: "Play More. Pay Less.",
 
       telephone: "+1-713-498-8813",
       email: "qbilliards59@gmail.com",
@@ -94,7 +140,7 @@ const structuredData = {
           name: "Houston",
         },
         {
-          "@type": "AdministrativeArea",
+          "@type": "Place",
           name: "Southwest Houston",
         },
       ],
@@ -143,6 +189,11 @@ const structuredData = {
           name: "Weekly Tournaments",
           value: true,
         },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Open Late",
+          value: true,
+        },
       ],
 
       knowsAbout: [
@@ -164,7 +215,16 @@ const structuredData = {
           name: "American Pool",
           price: "10.00",
           priceCurrency: "USD",
-          description: "American pool table rental per hour.",
+          description: "Seven-foot American pool table rental per hour.",
+          availability: "https://schema.org/InStock",
+        },
+        {
+          "@type": "Offer",
+          name: "Nine-Foot American Pool",
+          price: "15.00",
+          priceCurrency: "USD",
+          description: "Nine-foot American pool table rental per hour.",
+          availability: "https://schema.org/InStock",
         },
         {
           "@type": "Offer",
@@ -172,6 +232,7 @@ const structuredData = {
           price: "15.00",
           priceCurrency: "USD",
           description: "Standard full-size snooker table rental per hour.",
+          availability: "https://schema.org/InStock",
         },
         {
           "@type": "Offer",
@@ -179,6 +240,7 @@ const structuredData = {
           price: "20.00",
           priceCurrency: "USD",
           description: "Heated snooker table rental per hour.",
+          availability: "https://schema.org/InStock",
         },
         {
           "@type": "Offer",
@@ -186,6 +248,7 @@ const structuredData = {
           price: "15.00",
           priceCurrency: "USD",
           description: "Chinese 9-ball table rental per hour.",
+          availability: "https://schema.org/InStock",
         },
         {
           "@type": "Offer",
@@ -193,6 +256,7 @@ const structuredData = {
           price: "15.00",
           priceCurrency: "USD",
           description: "Carom and three-cushion table rental per hour.",
+          availability: "https://schema.org/InStock",
         },
       ],
     },
