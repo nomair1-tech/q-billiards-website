@@ -3,9 +3,34 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pool and Snooker Rates in Houston",
   description:
-    "Explore Q Billiards Arena pricing for American pool, standard and heated snooker, Chinese 9-ball and carom billiards, with competitive hourly rates in Houston.",
+    "Explore Q Billiards Arena pricing for American pool, standard and heated snooker, Chinese 9-ball and carom billiards. Competitive hourly rates, free pool promotions and open late in Houston.",
+
   alternates: {
     canonical: "/games",
+  },
+
+  openGraph: {
+    title: "Pool and Snooker Rates in Houston | Q Billiards Arena",
+    description:
+      "Explore hourly pricing for American pool, standard and heated snooker, Chinese 9-ball and carom billiards at Houston's premier billiards club.",
+    url: "https://www.qbilliardshtx.com/games",
+    type: "website",
+    images: [
+      {
+        url: "/images/hero/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Q Billiards Arena Houston",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Pool and Snooker Rates in Houston | Q Billiards Arena",
+    description:
+      "See hourly pricing for pool, snooker, Chinese 9-ball and carom billiards at Q Billiards Arena in Houston.",
+    images: ["/images/hero/hero.jpg"],
   },
 };
 
@@ -38,7 +63,7 @@ const games = [
     name: "Carom Billiards",
     price: "$15 per hour",
     details:
-      "Dedicated carom and three-cushion billiards tables.",
+      "Dedicated carom and three-cushion billiards tables for players of all skill levels.",
   },
 ];
 
@@ -56,8 +81,8 @@ export default function GamesPage() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-300">
-            Choose from several billiards disciplines, all available at one
-            Houston location.
+            Play American pool, professional snooker, heated snooker, Chinese
+            9-ball and carom billiards at Houston's premier billiards club.
           </p>
         </div>
       </section>
@@ -92,9 +117,9 @@ export default function GamesPage() {
           </h2>
 
           <p className="mt-3 max-w-3xl leading-7">
-            This promotion applies to participating American pool tables. Each
-            player must make the required equal purchase. Ask club staff for
-            current terms and availability.
+            Enjoy free American pool with equal purchase on participating tables.
+            Ask our staff for today's promotion details, current pricing and
+            availability.
           </p>
         </div>
       </section>
