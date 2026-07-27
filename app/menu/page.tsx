@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Menu | Q Billiards Arena",
+  title: "Food and Drinks Menu | Q Billiards Arena Houston",
   description:
-    "View food, snacks, drinks and desserts available at Q Billiards Arena in Houston.",
+    "Explore the Q Billiards Arena menu with burgers, fried chicken, snacks, chai, coffee, cold drinks and house specials while enjoying billiards in Houston.",
+  alternates: {
+    canonical: "/menu",
+  },
 };
 
 const menuSections = [
@@ -39,41 +42,95 @@ const menuSections = [
   {
     title: "Snacks",
     items: [
-      { name: "Aloo Samosa", price: "$1.99 each" },
-      { name: "Mini Beef Samosa — 4 Pieces", price: "$4.99" },
-      { name: "Chicken Puff Patties", price: "$2.99 each" },
-      { name: "Jalapeño Bombers — 6 Pieces", price: "$7.99" },
-      { name: "Cheese Sticks — 5 Pieces", price: "$6.99" },
-      { name: "Masala Fries", price: "$5.99" },
+      {
+        name: "Aloo Samosa",
+        price: "$1.99 each",
+      },
+      {
+        name: "Mini Beef Samosa — 4 Pieces",
+        price: "$4.99",
+      },
+      {
+        name: "Chicken Puff Patties",
+        price: "$2.99 each",
+      },
+      {
+        name: "Jalapeño Bombers — 6 Pieces",
+        price: "$7.99",
+      },
+      {
+        name: "Cheese Sticks — 5 Pieces",
+        price: "$6.99",
+      },
+      {
+        name: "Masala Fries",
+        price: "$5.99",
+      },
     ],
   },
   {
     title: "House Special Drinks",
     items: [
-      { name: "Mojito", price: "$6.99" },
-      { name: "Limca", price: "$6.99" },
-      { name: "Mint Lemonade", price: "$6.99" },
-      { name: "Sweet Lassi", price: "$6.99" },
-      { name: "Mango Lassi", price: "$7.99" },
+      {
+        name: "Mojito",
+        price: "$6.99",
+      },
+      {
+        name: "Limca",
+        price: "$6.99",
+      },
+      {
+        name: "Sweet Lassi",
+        price: "$6.99",
+      },
+      {
+        name: "Mango Lassi",
+        price: "$7.99",
+      },
+      {
+        name: "Cold Coffee",
+        price: "$6.99",
+      },
     ],
   },
   {
     title: "Cold Drinks",
     items: [
-      { name: "Mexican Coke, Fanta or Sprite", price: "$3.99" },
-      { name: "Red Bull", price: "$3.99" },
-      { name: "Monster", price: "$3.99" },
-      { name: "Gatorade", price: "$2.99" },
-      { name: "Mineral Water", price: "$2.99" },
+      {
+        name: "Mexican Coke, Fanta or Sprite",
+        price: "$3.99",
+      },
+      {
+        name: "Red Bull",
+        price: "$3.99",
+      },
+      {
+        name: "Monster",
+        price: "$3.99",
+      },
+      {
+        name: "Gatorade",
+        price: "$2.99",
+      },
+      {
+        name: "Mineral Water",
+        price: "$2.99",
+      },
     ],
   },
   {
-  title: "Hot Drinks",
-  items: [
-    { name: "Doodh Patti Chai", price: "$2.99" },
-    { name: "Nescafé", price: "$2.99" },
-  ],
-},
+    title: "Hot Drinks",
+    items: [
+      {
+        name: "Doodh Patti Chai",
+        price: "$2.99",
+      },
+      {
+        name: "Nescafé",
+        price: "$3.99",
+      },
+    ],
+  },
 ];
 
 export default function MenuPage() {
@@ -90,7 +147,8 @@ export default function MenuPage() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-300">
-            Enjoy food, snacks and refreshing drinks while you play.
+            Enjoy freshly prepared food, snacks, chai, coffee and refreshing
+            drinks while playing pool, snooker or billiards.
           </p>
         </div>
       </section>
@@ -126,7 +184,7 @@ export default function MenuPage() {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Prices and availability are subject to change. Please confirm current
-          pricing with club staff.
+          pricing with Q Billiards Arena staff.
         </p>
       </section>
     </main>
