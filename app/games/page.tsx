@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Games & Pricing | Q Billiards Arena",
+  title: "Pool and Snooker Rates in Houston",
   description:
-    "View pool, snooker, Chinese 9-ball and carom billiards pricing at Q Billiards Arena in Houston.",
+    "Explore Q Billiards Arena pricing for American pool, standard and heated snooker, Chinese 9-ball and carom billiards, with competitive hourly rates in Houston.",
+  alternates: {
+    canonical: "/games",
+  },
 };
 
 const games = [
@@ -49,7 +52,7 @@ export default function GamesPage() {
           </p>
 
           <h1 className="mt-3 text-5xl font-black md:text-6xl">
-            Games & Pricing
+            Games &amp; Pricing
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-300">
