@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Food and Drinks Menu | Q Billiards Arena Houston",
+  title: "Food and Drinks Menu in Houston",
   description:
     "Explore the Q Billiards Arena menu with burgers, fried chicken, snacks, chai, coffee, cold drinks and house specials while enjoying billiards in Houston.",
   alternates: {
