@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Visit Q Billiards Arena in Houston for American pool, professional snooker, heated snooker, Chinese 9-ball, carom billiards, poker room rentals, weekly tournaments, food, drinks and late-night entertainment.",
+    "Q Billiards Arena in Houston offers American pool, snooker, Chinese 9-ball, carom, weekly tournaments, food, drinks, and BYOB—open late daily.",
 
   keywords: [
     "Q Billiards Arena",
