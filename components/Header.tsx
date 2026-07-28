@@ -11,6 +11,7 @@ const navigation = [
   { name: "Gallery", href: "/gallery" },
   { name: "Poker Room", href: "/poker-room" },
   { name: "Tournaments", href: "/tournaments" },
+  { name: "Events", href: "/events" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -24,6 +25,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 text-white shadow-lg backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+        {/* Logo */}
         <Link
           href="/"
           onClick={closeMenu}
@@ -44,7 +46,8 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-5 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
@@ -56,6 +59,7 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Call and Mobile Menu Buttons */}
         <div className="flex items-center gap-3">
           <a
             href="tel:+17134988813"
@@ -75,18 +79,25 @@ export default function Header() {
 
           <button
             type="button"
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setMenuOpen((current) => !current)}
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/15 bg-white/5 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/15 bg-white/5 transition hover:border-yellow-400 hover:text-yellow-400 lg:hidden"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-black px-5 py-5 lg:hidden">
+        <div
+          id="mobile-navigation"
+          className="border-t border-white/10 bg-black px-5 py-5 lg:hidden"
+        >
           <nav className="mx-auto grid max-w-7xl gap-2">
             {navigation.map((item) => (
               <Link
@@ -105,7 +116,7 @@ export default function Header() {
               href="https://www.google.com/maps/search/?api=1&query=10500+W+Belfort+Ave+Unit+200+Houston+TX+77031"
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-xl border border-yellow-400 px-5 py-3 text-center font-black text-yellow-400"
+              className="block rounded-xl border border-yellow-400 px-5 py-3 text-center font-black text-yellow-400 transition hover:bg-yellow-400 hover:text-black"
             >
               Get Directions
             </a>
