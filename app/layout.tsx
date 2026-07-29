@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import StructuredData from "@/components/StructuredData";
+import WhatsHappeningBar from "@/components/WhatsHappeningBar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.qbilliardshtx.com"),
@@ -104,8 +105,13 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-gray-950 antialiased">
         <StructuredData />
+
+        <WhatsHappeningBar />
+
         <Header />
+
         {children}
+
         <Footer />
       </body>
     </html>
