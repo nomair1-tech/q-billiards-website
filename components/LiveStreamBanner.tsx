@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-const liveMessage =
-  "🔴 LIVE NOW AT Q BILLIARDS ARENA — WATCH TODAY’S MATCH LIVE — CLICK HERE TO WATCH";
+const message =
+  "🔴 LIVE NOW AT Q BILLIARDS ARENA — WATCH THE ACTION LIVE — CLICK HERE TO WATCH";
 
-export default function WhatsHappeningBar() {
+export default function LiveStreamBanner() {
   return (
     <Link
       href="/live"
@@ -12,28 +12,28 @@ export default function WhatsHappeningBar() {
     >
       <div className="q-ticker flex w-max items-center whitespace-nowrap">
         <span className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base">
-          {liveMessage}
+          {message}
         </span>
 
         <span
           aria-hidden="true"
           className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base"
         >
-          {liveMessage}
+          {message}
         </span>
 
         <span
           aria-hidden="true"
           className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base"
         >
-          {liveMessage}
+          {message}
         </span>
 
         <span
           aria-hidden="true"
           className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base"
         >
-          {liveMessage}
+          {message}
         </span>
       </div>
     </Link>
