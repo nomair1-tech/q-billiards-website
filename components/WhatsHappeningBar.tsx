@@ -1,41 +1,36 @@
-import Link from "next/link";
-
-const liveMessage =
-  "🔴 LIVE NOW AT Q BILLIARDS ARENA — WATCH TODAY’S MATCH LIVE — CLICK HERE TO WATCH";
-
 export default function WhatsHappeningBar() {
+  const announcements = [
+    "🎱 FREE POOL with Equal Purchase",
+    "🏆 Thursday 1 Red Snooker Tournament • Every Thursday • 8:30 PM",
+    "🎱 Professional Snooker Coaching Available",
+    "♠️ Private Poker Room Rentals Available",
+    "🥤 BYOB • Open Late Until 2 AM (4 AM Fri & Sat)",
+    "📍 Q Billiards Arena • Houston's Largest Billiards Club",
+  ];
+
+  const tickerText = announcements.join("     •     ");
+
   return (
-    <Link
-      href="/live"
-      aria-label="Watch Q Billiards Arena live stream"
-      className="ticker-mask relative z-[60] block overflow-hidden bg-red-700 py-3 text-white transition hover:bg-red-600"
-    >
+    <div className="ticker-mask relative z-[60] overflow-hidden bg-black py-3 text-white">
       <div className="q-ticker flex w-max items-center whitespace-nowrap">
-        <span className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base">
-          {liveMessage}
+        <span className="px-8 text-sm font-semibold tracking-wide sm:text-base">
+          {tickerText}
         </span>
 
         <span
           aria-hidden="true"
-          className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base"
+          className="px-8 text-sm font-semibold tracking-wide sm:text-base"
         >
-          {liveMessage}
+          {tickerText}
         </span>
 
         <span
           aria-hidden="true"
-          className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base"
+          className="px-8 text-sm font-semibold tracking-wide sm:text-base"
         >
-          {liveMessage}
-        </span>
-
-        <span
-          aria-hidden="true"
-          className="px-8 text-sm font-bold uppercase tracking-widest sm:text-base"
-        >
-          {liveMessage}
+          {tickerText}
         </span>
       </div>
-    </Link>
+    </div>
   );
 }
